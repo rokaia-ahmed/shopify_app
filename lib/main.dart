@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shopify_app/screens/auth/screens/sign_in.dart';
+import 'package:shopify_app/screens/home/screen/home.dart';
 import 'core/router/router.dart';
 import 'core/srevices/preference_service.dart';
 import 'core/utilites/theme_app.dart';
@@ -14,12 +15,18 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
+    Widget startScreen ;
+    if(PreferenceService.prefs().getString('email')!=null){
+      startScreen = const HomeScreen();
+    }else{
+      startScreen = SignInScreen();
+    }
     return MaterialApp(
       title: 'Flutter Demo',
       navigatorKey:navigatorKey ,
       debugShowCheckedModeBanner: false,
       theme:AppTheme.lightTheme ,
-      home:   SignInScreen(),
+      home:  startScreen,
     );
   }
 }
