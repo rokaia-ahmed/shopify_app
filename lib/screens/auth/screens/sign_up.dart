@@ -78,7 +78,7 @@ class SignUpScreen extends StatelessWidget {
               ),
               CustomDefaultButton(
                 onTap:(){} ,
-                text: 'Sign test',
+                text: 'Sign up',
               ),
               const SizedBox(
                 height:10,

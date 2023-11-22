@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:shopify_app/screens/auth/screens/sign_in.dart';
 import 'core/router/router.dart';
+import 'core/srevices/preference_service.dart';
 import 'core/utilites/theme_app.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await PreferenceService.init();
   runApp(const MyApp());
 }
 

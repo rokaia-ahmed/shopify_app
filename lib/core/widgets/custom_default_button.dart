@@ -16,8 +16,12 @@ class CustomDefaultButton extends StatelessWidget {
       height: 50,
       shape: OutlineInputBorder(
         borderRadius: BorderRadius.circular(20),
+        borderSide: const BorderSide(
+          width: 0,
+          color: Colors.transparent,
+        ),
       ),
-      child:Text('Sign In',
+      child:Text(text,
         style:Theme.of(context).textTheme.labelMedium,
       ) ,
 
