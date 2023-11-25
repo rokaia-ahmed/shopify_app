@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:shopify_app/core/srevices/preference_service.dart';
 import 'package:shopify_app/screens/auth/screens/sign_up.dart';
-import 'package:shopify_app/screens/home/screen/home.dart';
 import '../../../core/router/router.dart';
 import '../../../core/widgets/custom_default_button.dart';
 import '../../../core/widgets/custom_text_form_field.dart';
+import '../../layout/screen/layout.dart';
 
 class SignInScreen extends StatelessWidget {
    SignInScreen({super.key});
@@ -98,7 +98,7 @@ class SignInScreen extends StatelessWidget {
                     if(formKey.currentState!.validate()) {
                       PreferenceService.prefs().
                       setString('email',emailController.text);
-                      MagicRouter.navigateTo(const HomeScreen());
+                      MagicRouter.navigateTo(const LayoutScreen());
                     }
                   } ,
                   ),
