@@ -24,6 +24,9 @@ class CustomCarouselSlider extends StatelessWidget {
                   width: MediaQuery.of(context).size.width,
                   height: 200,
                   fit: BoxFit.fill,
+                  errorBuilder:(context,_,error){
+                  return const SizedBox();
+                  } ,
                 ),
                 DotsIndicator(
                   dotsCount: images.length,

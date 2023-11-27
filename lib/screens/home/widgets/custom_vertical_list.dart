@@ -6,7 +6,7 @@ class CustomVerticalList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
-        physics: const BouncingScrollPhysics(),
+         physics:const BouncingScrollPhysics() ,
         shrinkWrap:true ,
         itemBuilder: (context,index)=>const BuildItem(),
         separatorBuilder: (context,index)=>
@@ -78,7 +78,10 @@ class BuildItem extends StatelessWidget {
               width: 160,
               fit:BoxFit.fill ,
               errorBuilder:(context,_,stackTrace){
-                return const SizedBox();
+                return const SizedBox(
+                  height:120 ,
+                  width: 160,
+                );
               } ,
             ),
           ],
