@@ -87,10 +87,13 @@ class HomeScreen extends StatelessWidget {
             height: 10,
           ),
         ),
-        const SliverPadding(
-          padding: EdgeInsets.fromLTRB(10, 0, 10, 10),
-          sliver: SliverToBoxAdapter(
-            child: CustomVerticalList(),
+         SliverPadding(
+          padding: const EdgeInsets.fromLTRB(10, 0, 10, 10),
+          sliver: SliverList(
+            delegate:SliverChildBuilderDelegate(
+              childCount: 1,
+              (context, index) =>const CustomVerticalList() ,
+            ) ,
           ),
         ),
       ],
